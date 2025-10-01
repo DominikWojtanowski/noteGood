@@ -40,3 +40,64 @@
 .read-the-docs {
   color: #888;
 }
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.expanded-small-searchbar {
+  background-color: #535456;
+  border-radius: 16px;
+  display: flex;
+  flex-directions: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  height: 50px;
+}
+.search-input {
+  border: 0px;
+  font-size: 16px;
+  vertical-align: super;
+  background: transparent;
+}
+input[type="text"]:focus {
+  outline: none;
+  color: black;
+}
+.button-icon {
+  background:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-align: center; }
+.button-icon:hover {
+  border:0px;
+  background-color: #ffffff77;
+  border-radius: 256px;
+}
+.button-icon:not(:focus) {
+  border: 0px;
+  outline: none;
+}
+
+

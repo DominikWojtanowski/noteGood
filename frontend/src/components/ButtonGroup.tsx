@@ -8,7 +8,12 @@ export default function ButtonGroup({
   return (
     <>
       {buttonValue.map((singleButtonValue) => {
-        return <Button icon={singleButtonValue.buttonIconName}></Button>;
+        return (
+          <Button
+            icon={singleButtonValue.buttonIconName}
+            clickFunction={singleButtonValue.buttonClickFucntion}
+          ></Button>
+        );
       })}
     </>
   );
