@@ -1,20 +1,15 @@
+import type React from "react";
 import type { MouseEventHandler } from "react";
 
 export interface ButtonValues {
-  buttonIconName: string;
-  buttonClickFucntion: () => MouseEventHandler<HTMLButtonElement>;
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  handleClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-export default function Button({
-  icon,
-  clickFunction,
-}: {
-  icon: string;
-  clickFunction: () => MouseEventHandler<HTMLButtonElement>;
-}) {
+export default function Button({ Icon, handleClick }: ButtonValues) {
   return (
-    <button className="icon_outlined" onClick={clickFunction()}>
-      <span className="material-symbols-outlined">{icon}</span>
+    <button className="button_icon" onClick={handleClick}>
+      <Icon />
     </button>
   );
 }

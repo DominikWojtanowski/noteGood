@@ -5,7 +5,7 @@ const CloseSVG_24 = (props: React.SVGProps<SVGSVGElement>) => (
     width={24}
     height={24}
     fill="#e3e3e3"
-    viewBox="0 0 24 24"
+    viewBox="0 -960 960 960"
     {...props}
   >
     <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224z" />
