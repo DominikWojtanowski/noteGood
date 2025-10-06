@@ -1,14 +1,12 @@
 import type React from "react";
-import type { MouseEventHandler } from "react";
 
-export interface ButtonValues {
+export interface ButtonValues extends React.HTMLAttributes<HTMLElement> {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
-  handleClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-export default function Button({ Icon, handleClick }: ButtonValues) {
+export default function Button({ Icon, ...props }: ButtonValues) {
   return (
-    <button className="button_icon" onClick={handleClick}>
+    <button className="button_icon" {...props}>
       <Icon />
     </button>
   );
