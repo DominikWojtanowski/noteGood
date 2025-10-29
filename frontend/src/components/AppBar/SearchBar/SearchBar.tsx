@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
-import Button from "./Button.tsx";
-import SearchSVG_24 from "../assets/SearchSVG_24";
-import CloseSVG_24 from "../assets/CloseSVG_24";
-import ArrowBackSVG_24 from "../assets/ArrowBackSVG_24";
-
+import Button from "../Button/Button";
+import ArrowBackSVG_24 from "../../../assets/ArrowBackSVG_24";
+import CloseSVG_24 from "../../../assets/CloseSVG_24";
+import SearchSVG_24 from "../../../assets/SearchSVG_24";
+import styles from "./SearchBar.module.css";
 export default function SearchBar({
   placeholder,
   whenChangeLayoutWidth,
@@ -17,7 +17,7 @@ export default function SearchBar({
   return (
     <>
       {isExpanded ? (
-        <div className="small-searchbar">
+        <div className={styles.searchBar}>
           <Button
             Icon={ArrowBackSVG_24}
             onClick={() => {
@@ -26,7 +26,7 @@ export default function SearchBar({
           ></Button>
           <input
             type="text"
-            className="search-input"
+            className={styles.searchInput}
             placeholder={placeholder}
             value={searchInput}
             ref={focusInputRef}

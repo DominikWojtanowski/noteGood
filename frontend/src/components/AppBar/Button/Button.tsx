@@ -1,4 +1,5 @@
 import type React from "react";
+import styles from "./Button.module.css";
 
 export interface ButtonValues extends React.HTMLAttributes<HTMLElement> {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -6,7 +7,7 @@ export interface ButtonValues extends React.HTMLAttributes<HTMLElement> {
 
 export default function Button({ Icon, ...props }: ButtonValues) {
   return (
-    <button className="button_icon" {...props}>
+    <button className={styles.button} {...props}>
       <Icon />
     </button>
   );

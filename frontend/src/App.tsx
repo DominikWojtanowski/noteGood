@@ -1,11 +1,8 @@
 import "./App.css";
-import SearchBar from "./components/SearchBar";
+import Button from "./components/AppBar/Button/Button";
+import SearchBar from "./components/AppBar/SearchBar/SearchBar";
 function App() {
-  return (
-    <>
-      <SearchBar placeholder="Search" whenChangeLayoutWidth={800}></SearchBar>
-    </>
-  );
+  return <></>;
 }
 
 export default App;
