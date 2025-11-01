@@ -8,20 +8,31 @@ import AppsSVG_24 from "../../../assets/AppsSVG_24";
 
 import SearchBar from "../SearchBar/SearchBar";
 import ButtonGroup from "../ButtonGroup/ButtonGroup";
+import { useState } from "react";
 
 export default function AppBar({
   activationLabel,
 }: {
   activationLabel: string;
 }) {
+  const [isGridViewSet, setView] = useState<boolean>(false);
+
+  const ButtonsGroup = [
+    [
+      { Icon: RefreshSVG_24 },
+      { Icon: isGridViewSet ? ViewAsGridSVG_24 : ViewAsListSVG_24 },
+      { Icon: SettingsSVG_24 },
+    ],
+    [{ Icon: AppsSVG_24 }],
+  ];
+
   return (
     <>
       <Button Icon={MenuSVG_24} />
       {activationLabel}
       <SearchBar placeholder="Search" whenChangeLayoutWidth={800} />
-      <ButtonGroup
-        buttonValue={[RefreshSVG_24, ViewAsGridSVG_24, SettingsSVG_24]}
-      />
+      <ButtonGroup Buttons={ButtonsGroup[0]} />
+      <ButtonGroup Buttons={ButtonsGroup[1]} />
     </>
   );
 }

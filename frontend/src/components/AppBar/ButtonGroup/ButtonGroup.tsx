@@ -1,14 +1,17 @@
-import Button, { type ButtonValues } from "../Button/Button";
+import Button from "../Button/Button";
+import type ButtonProps from "../Button/Button.types";
 
-export default function ButtonGroup({
-  buttonValue,
-}: {
-  buttonValue: ButtonValues[];
-}) {
+export default function ButtonGroup({ Buttons }: { Buttons: ButtonProps[] }) {
   return (
     <>
-      {buttonValue.map((singleButtonValue) => {
-        return <Button Icon={singleButtonValue.Icon} />;
+      {Buttons.map((singleButtonValue, index) => {
+        return (
+          <Button
+            key={index}
+            Icon={singleButtonValue.Icon}
+            onClickEventHandler={singleButtonValue.onClickEventHandler}
+          />
+        );
       })}
     </>
   );

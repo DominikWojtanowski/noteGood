@@ -1,13 +1,8 @@
-import type React from "react";
 import styles from "./Button.module.css";
-
-export interface ButtonValues extends React.HTMLAttributes<HTMLElement> {
-  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
-}
-
-export default function Button({ Icon, ...props }: ButtonValues) {
+import type ButtonProps from "./Button.types";
+export default function Button({ Icon, onClickEventHandler }: ButtonProps) {
   return (
-    <button className={styles.button} {...props}>
+    <button className={styles.button} onClick={onClickEventHandler}>
       <Icon />
     </button>
   );

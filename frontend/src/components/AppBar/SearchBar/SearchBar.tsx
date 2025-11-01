@@ -20,7 +20,7 @@ export default function SearchBar({
         <div className={styles.searchBar}>
           <Button
             Icon={ArrowBackSVG_24}
-            onClick={() => {
+            onClickEventHandler={() => {
               setExpanded(false);
             }}
           ></Button>
@@ -41,7 +41,7 @@ export default function SearchBar({
           ></input>
           <Button
             Icon={CloseSVG_24}
-            onClick={() => {
+            onClickEventHandler={() => {
               setSearchInput("");
               focusInputRef.current?.focus();
             }}
@@ -50,7 +50,7 @@ export default function SearchBar({
       ) : (
         <Button
           Icon={SearchSVG_24}
-          onClick={() => {
+          onClickEventHandler={() => {
             setExpanded(true);
           }}
         ></Button>
